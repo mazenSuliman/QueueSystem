@@ -1,0 +1,80 @@
+﻿@model ClinicStatus.Entities.Ticket
+
+@{
+    Layout = null;
+}
+
+<body onload="window.print()">
+    <table dir="rtl">
+        <tr>
+            <td class="text-center">
+                <div class="panel text-center">
+                    <h1 style="font-size:xx-large">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Model.ID</h1>
+                </div>
+            </td>
+        </tr>
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+        <tr>
+            <td>
+                <p style="font-size:larger"><b>التاريخ:</b></p>
+            </td>
+            <td>
+                <p style="font-size:larger">@Model.Time.ToString("dd/MM/yyyy")</p>
+            </td>
+        </tr>
+        <tr><td></td></tr>
+        <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<hr /></td></tr>
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+        <tr>
+            <td>
+                <p style="font-size:larger"><b>الوقت:</b></p>
+            </td>
+            <td>
+                <p style="font-size:larger">@Model.Time.ToString("HH:mm:ss")</p>
+            </td>
+        </tr>
+        <tr><td></td></tr>
+        <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<hr /></td></tr>
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+        <tr>
+            <td>
+                <p style="font-size:larger"><b>الطبيب:</b> </p>
+            </td>
+            <td>
+                <p style="font-size:larger">@Model.Doctor</p>
+            </td>
+        </tr>
+        <tr><td></td></tr>
+        <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<hr /></td></tr>
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+        <tr>
+            <td>
+                <p style="font-size:larger"><b>العيادة:</b></p>
+            </td>
+            <td>
+                <p style="font-size:larger">@Model.Speciality</p>
+            </td>
+        </tr>
+        <tr><td></td></tr>
+        <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<hr /></td></tr>
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+        <tr>
+            <td>
+                <b><p style="font-size:larger">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(@Model.Floor)</p></b>
+            </td>
+        </tr>
+        <tr><td></td></tr>
+        <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<hr /></td></tr>
+        <tr><td></td></tr>
+        <tr><td></td></tr>
+    </table>
+    <a class="btn btn-primary" href="/Home/Index"><b>مستشفى الدار ترحب بكم</b></a>
+</body>
+

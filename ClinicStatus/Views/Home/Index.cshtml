@@ -1,0 +1,31 @@
+﻿@model ClinicStatus.ViewModels.HomePageViewModel
+
+@{
+    ViewData["Title"] = "الصفحة الرئيسية";
+}
+
+
+
+<div class="row">
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-8">
+
+        <div class="list-group">
+            <h1 style="align-content:center">
+                <a href="#" class="list-group-item text-center active">
+                    قم بإختيار الطابق </a>
+            </h1>
+            @foreach (var floor in Model.Floors)
+            {
+                <a href="/Home/Clinic/@floor.ID" class="list-group-item text-center col-xs-6"><h3> @floor.Name</h3></a>
+            }
+
+        </div>
+    </div>
+
+    <div class="col-md-2">
+
+    </div>
+</div>
