@@ -1,0 +1,38 @@
+﻿@model ClinicStatus.ViewModels.ClinicePageViewModel
+
+@{
+    ViewData["Title"] = Model.Floor.Name;
+}
+
+
+<br />
+
+<div class="row">
+    <div class="col-xs-2">
+        <a href="/Home/Index" class="btn btn-primary btn-block active" role="button" aria-pressed="true"><h4>عــودة</h4> </a>
+    </div>
+
+    <div class="col-xs-8">
+
+        <div class="list-group right">
+            <h2>
+                <a href="#" class="list-group-item text-center active">
+                    قم بإختيار العيادة
+                </a>
+            </h2>
+
+
+
+            @foreach (var clinic in Model.Clinic)
+            {
+
+                <a href="/Home/Doctor/@clinic.Speciality" class="list-group-item text-center col-xs-4"> <h4> @clinic.Name </h4></a>
+            }
+
+        </div>
+
+    </div>
+    <div class="col-xs-1"></div>
+        <div class="col-xs-1"><div class="h1 text-right" style="color:darkred; float:right">@Model.Floor.Name</div></div>
+
+    </div>
